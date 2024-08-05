@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<package name="LoginPackage" extends="struts-default">
+		<action name="login">
+			<result>index.jsp</result>
+		</action>
+	</package>
+
+	<package name="Admin" extends="struts-default">
+       <action name="Admin" class="com.sathish.controller.AdminLoginAction" method="adminLogin">
+	   </action>
+        <action name="admin">
+        	<result>/WEB-INF/views/AdminInterface.jsp</result>
+        </action>
+   	</package>
+
+    <package name="SignIn" extends="struts-default">
+        <action name="signin" class="com.sathish.controller.UserSigninAction" method="userSignin">
+		</action>
+        <action name="user">
+        	<result>/WEB-INF/views/UserInterface.jsp</result>
+        </action>
+    </package>
+
+    <package name="SignUp" extends="struts-default">
+        <action name="signup" class="com.sathish.controller.UserSignupAction" method="userSignup">
+		</action>
+    </package>
+
+    <package name="AddBook" extends="struts-default">
+        <action name="addbook" class="com.sathish.controller.AddBookAction" method="addBook">
+		</action>
+    </package>
+    
+    <package name="DeleteBook" extends="struts-default">
+    	<action name="deletebook" class="com.sathish.controller.DeleteBookAction" method="deleteBook">
+		</action>
+    </package>
+    
+    <package name="ShowAllBooks" extends="struts-default">
+    	<action name="fetchbooks" class="com.sathish.controller.FetchBooksAction" method="fetchBooks">
+		</action>
+    </package>
+    
+    <package name="ShowBorrowedBooks" extends="struts-default">
+    	<action name="fetchborrowedbooks" class="com.sathish.controller.FetchBorrowedBooks" method="borrowedBooks">
+		</action>
+    </package>
+
+	<package name="ShowAllUsers" extends="struts-default">
+		<action name="showallusers" class="com.sathish.controller.FetchUsersAction" method="fetchUsers">
+		</action>
+	</package>
+	
+	<package name="BorrowBook" extends="struts-default">
+		<action name="borrowbook" class="com.sathish.controller.BorrowBookAction" method="borrowBook">
+		</action>
+	</package>
+	
+	<package name="RenewBook" extends="struts-default">
+		<action name="renewbook" class="com.sathish.controller.RenewBookAction" method="renewBook">
+		</action>
+	</package>
+	
+	<package name="ReturnBook" extends="struts-default">
+		<action name="returnbook" class="com.sathish.controller.ReturnBookAction" method="returnBook">
+		</action>
+	</package>
+	
+	<package name="UserBorrowedBooks" extends="struts-default">
+		<action name="userborrowbooks" class="com.sathish.controller.FetchUserBorrowedBooks" method="fetchBooks">
+		</action>
+	</package>
+	
+	<package name="SubscribeMembership" extends="struts-default">
+		<action name="subscribeMembership" class="com.sathish.controller.SubscribeMembershipAction" method="subscribe">
+		</action>
+	</package>
+	
+	<package name="UserDetails" extends="struts-default">
+		<action name="fetchdetails" class="com.sathish.controller.GetUserDetails" method="fetchUserDetails">
+		</action>
+	</package>
+	
+	<package name="UpdateDetails" extends="struts-default">
+		<action name="updatedetails" class="com.sathish.controller.UpdateUserDetails" method="updateDetails">
+		</action>
+	</package>
+	
+	<package name="UserLogout" extends="struts-default">
+		<action name="login" class="com.sathish.controller.UserLogoutAction" method="execute">
+			<result>/index.jsp</result>
+		</action>
+	</package>
+
+	<package name="suggestionsList" extends="struts-default">
+		<action name="getAuthorsName" class="com.sathish.controller.GetSuggestionsAction" method="authorNames"></action>
+		<action name="getGenresName" class="com.sathish.controller.GetSuggestionsAction" method="genreNames"></action>
+	</package>
+
+</struts>
+
+
+
+
