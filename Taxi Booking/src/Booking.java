@@ -76,12 +76,8 @@ public class Booking {
     }
     public void initializeTaxis(){
         Taxi taxi = new Taxi();
-        taxis.add(taxi);
-        taxi = new Taxi();
-        taxis.add(taxi);
-        taxi = new Taxi();
-        taxis.add(taxi);
-        taxi = new Taxi();
-        taxis.add(taxi);
+        for(int i=0;i<4;i++){
+            taxi.add(new Taxi());
+        }
     }
 }
